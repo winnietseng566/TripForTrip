@@ -15,6 +15,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="._01_MyJourney.JourneyActivity" />
+        <activity android:name="._02_SpotSearch.SearchActivity"></activity>
     </application>
 
 </manifest>
