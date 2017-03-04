@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "50007020088",
+    "firebase_url": "https://tripfortrip-ae741.firebaseio.com",
+    "project_id": "tripfortrip-ae741",
+    "storage_bucket": "tripfortrip-ae741.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:50007020088:android:0d64f6798e8cba51",
+        "android_client_info": {
+          "package_name": "com.tripfortrip.tripfortrip"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "50007020088-lsu64cqp8uh97tc9av0jkjkvheq24ms3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tripfortrip.tripfortrip",
+            "certificate_hash": "9B2B2B59CC593A82F2DB2B2118DDDD3A9128938B"
+          }
+        },
+        {
+          "client_id": "50007020088-cndar7iojtnmv5s81sv66fsn1hsjm2g1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tripfortrip.tripfortrip",
+            "certificate_hash": "9D18BF2407B0D7A3FEA6AC0D5F6D6F3892561635"
+          }
+        },
+        {
+          "client_id": "50007020088-p4iei7appv8sc3kmfhmapfa6jujfgpct.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDh1xxXiaLfEOF5fy-4YUX811jiOzC97lw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "50007020088-p4iei7appv8sc3kmfhmapfa6jujfgpct.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.tripfortrip.tripfortrip">
-
+ <!--<uses-permission android:name="android.permission.INTERNET"/>-->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,7 +16,10 @@
             </intent-filter>
         </activity>
         <activity android:name="._01_MyJourney.JourneyActivity" />
-        <activity android:name="._02_SpotSearch.SearchActivity"></activity>
+        <activity android:name="._02_SpotSearch.SearchActivity" />
+        <activity android:name="._06_Member.LoginActivity">
+
+        </activity>
     </application>
 
 </manifest>
