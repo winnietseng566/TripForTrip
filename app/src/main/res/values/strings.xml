@@ -1,6 +1,26 @@
 <resources>
     <string name="app_name">Trip For Trip</string>
+    
+    <string name="text_myJourney">我的旅程</string>
+    <string name="text_Scene">景點瀏覽</string>
+    <string name="text_Bag">我的行李</string>
+    <string name="text_EmergencyButton">緊急按鈕</string>
+    <string name="text_Share">分享ＡＰＰ</string>
+    <string name="text_About">關於我</string>
+    <string name="text_Map">ＭＡＰ</string>
+    <string name="text_Settings">會員專區</string>
+    <string name="text_UserName">Bruce Lee</string>
+    <string name="text_Email">bruceLee@gmail.com</string>
+    <string name="text_Open">Open</string>
+    <string name="text_Close">Close</string>
+    <string name="text_ShouldGrant">Permission to read from external storage should be granted</string>
+    
     <string name="title_activity_journey">JourneyActivity</string>
+    
+    
+    
+    
+    
     <string name="pref_name">User</string>
     <string name="pref_uid">uid</string>
     <string name="pref_email">email</string>
@@ -9,4 +29,5 @@
     <string name="again">重新輸入</string>
     <string name="lostPasswd">忘記密碼</string>
     <string name="web_application_id">hvieO-l-PPEYGSXBNjq_462o</string>
+    <string name="text_exJourney">歷史旅程</string>
 </resources>
