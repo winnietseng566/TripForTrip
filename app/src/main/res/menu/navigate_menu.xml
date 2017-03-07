@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/item_myJourney"
+            android:checked="true"
+            android:icon="@drawable/ic_home"
+            android:title="@string/text_myJourney" />
+        <item
+            android:id="@+id/item_Scene"
+            android:icon="@drawable/ic_news"
+            android:title="@string/text_Scene" />
+        <item
+            android:id="@+id/item_EmergencyButton"
+
+            android:title="@string/text_EmergencyButton" />
+        <item
+            android:id="@+id/item_exJourney"
+
+            android:title="@string/text_exJourney" />
+
+        <item
+            android:id="@+id/item_About"
+
+            android:title="@string/text_About" />
+        <!--<item-->
+            <!--android:id="@+id/item_Bag"-->
+
+            <!--android:title="@string/text_Bag" />-->
+
+        <!--<item-->
+            <!--android:id="@+id/item_Share"-->
+
+            <!--android:title="@string/text_Share" />-->
+
+        <!--<item-->
+            <!--android:id="@+id/item_Map"-->
+            <!--android:icon="@drawable/ic_map"-->
+            <!--android:title="@string/text_Map" />-->
+
+        <!--<item-->
+            <!--android:id="@+id/drawer_settings"-->
+            <!--android:icon="@drawable/ic_settings"-->
+            <!--android:title="@string/text_Settings" />-->
+
+    </group>
+</menu>
