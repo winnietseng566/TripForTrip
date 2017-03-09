@@ -13,4 +13,5 @@ public class JourneyActivity extends AppCompatActivity {
         setContentView(R.layout.activity_journey);
     }
     //sAAAAAA
+    //QQQ
 }
