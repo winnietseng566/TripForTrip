@@ -12,4 +12,5 @@ public class JourneyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_journey);
     }
+    //ssssssssssssss
 }
