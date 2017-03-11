@@ -30,4 +30,7 @@
     <string name="lostPasswd">忘記密碼</string>
     <string name="web_application_id">hvieO-l-PPEYGSXBNjq_462o</string>
     <string name="text_exJourney">歷史旅程</string>
+    <string name="Setting">取得設定資訊中....</string>
+    <string name="Loc">尚未取得定位資訊</string>
+    <string name="bt">手機定位功能設定</string>
 </resources>

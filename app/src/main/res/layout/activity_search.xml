@@ -10,4 +10,33 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.tripfortrip.tripfortrip._02_SpotSearch.SearchActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txvLoc"
+        android:text="@string/Loc"
+        android:textSize="24sp"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/txvSetting"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txvSetting"
+        android:text="@string/Setting"
+        android:textSize="24sp"
+        android:layout_centerVertical="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bt"
+        android:onClick="setup"
+        android:layout_marginTop="18dp"
+        android:layout_below="@+id/txvLoc"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
 </RelativeLayout>
