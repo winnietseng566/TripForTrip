@@ -5,12 +5,6 @@
     android:background="#ffedaa"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="6dp"
-        android:text="@string/text_myJourney"
-        android:textSize="50sp" />
 
     <android.support.design.widget.CoordinatorLayout
         android:id="@+id/coordinatorLayout"
@@ -18,6 +12,11 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_journey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </android.support.v7.widget.RecyclerView>
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/btAdd"
             android:layout_width="wrap_content"
@@ -27,6 +26,7 @@
             android:src="@drawable/ic_add"
             app:elevation="6dp"
             app:rippleColor="#FFFFFF" />
+
     </android.support.design.widget.CoordinatorLayout>
 
 </LinearLayout>
