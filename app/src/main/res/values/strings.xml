@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Trip For Trip</string>
-    
+
     <string name="text_myJourney">我的旅程</string>
     <string name="text_Scene">景點瀏覽</string>
     <string name="text_Bag">我的行李</string>
@@ -14,13 +14,10 @@
     <string name="text_Open">Open</string>
     <string name="text_Close">Close</string>
     <string name="text_ShouldGrant">Permission to read from external storage should be granted</string>
-    
+
     <string name="title_activity_journey">JourneyActivity</string>
-    
-    
-    
-    
-    
+
+
     <string name="pref_name">User</string>
     <string name="pref_uid">uid</string>
     <string name="pref_email">email</string>
@@ -33,4 +30,10 @@
     <string name="Setting">取得設定資訊中....</string>
     <string name="Loc">尚未取得定位資訊</string>
     <string name="bt">手機定位功能設定</string>
+    <string name="lan">輸入緯度：</string>
+    <string name="lon">輸入經度：</string>
+    <string name="etlon">例如: 121.52</string>
+    <string name="etlan">例如: 25.03</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="tv1">經緯度</string>
 </resources>
