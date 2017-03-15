@@ -16,6 +16,7 @@
     <string name="text_ShouldGrant">Permission to read from external storage should be granted</string>
 
     <string name="title_activity_journey">JourneyActivity</string>
+    <string name="facebook_app_id">1155893724541001</string>
 
 
     <string name="pref_name">User</string>
@@ -36,4 +37,6 @@
     <string name="etlan">例如: 25.03</string>
     <string name="title_activity_maps">Map</string>
     <string name="tv1">經緯度</string>
+    <string name="btn_logout_from_google">Logout from Google</string>
+    <string name="btn_revoke_access">Revoke Access</string>
 </resources>
