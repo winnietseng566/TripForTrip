@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:paddingTop="20dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+
+    <android.support.design.widget.TextInputLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+<EditText
+    android:id="@+id/edt_jouneyName"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="行程名稱" />
+
+
+    </android.support.design.widget.TextInputLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edt_jouneyStart"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:focusable="true"
+                android:hint="出發日期"
+                android:layout_width="240dp" />
+
+
+        </android.support.design.widget.TextInputLayout>
+        <ImageView
+            android:id="@+id/iv_calendarStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/buttom_calendar"
+            android:layout_gravity="center"
+            android:paddingLeft="10dp"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+
+        <EditText
+            android:id="@+id/edt_jouneyEnd"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:focusable="true"
+            android:hint="結束日期"
+            android:layout_width="240dp" />
+
+
+
+    </android.support.design.widget.TextInputLayout>
+        <ImageView
+            android:id="@+id/iv_calendarEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/buttom_calendar"
+            android:layout_gravity="center"
+            android:paddingLeft="10dp"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

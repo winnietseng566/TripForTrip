@@ -184,11 +184,11 @@ public class MainActivity extends AppCompatActivity {
                         switchFragment(fragment);
                         setTitle(R.string.text_About);
                         break;
-//                    case R.id.drawer_settings:  //會員專區
-//                        fragment = new com.tripfortrip.tripfortrip._00_Main.SettingsFragment();
-//                        switchFragment(fragment);
-//                        setTitle(R.string.text_Settings);
-//                        break;
+                    case R.id.drawer_settings:  //會員專區
+                        fragment = new com.tripfortrip.tripfortrip._00_Main.SettingsFragment();
+                        switchFragment(fragment);
+                        setTitle(R.string.text_Settings);
+                        break;
                     default:
                         initBody();
                         break;

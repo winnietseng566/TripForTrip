@@ -40,10 +40,10 @@
             <!--android:icon="@drawable/ic_map"-->
             <!--android:title="@string/text_Map" />-->
 
-        <!--<item-->
-            <!--android:id="@+id/drawer_settings"-->
-            <!--android:icon="@drawable/ic_settings"-->
-            <!--android:title="@string/text_Settings" />-->
+        <item
+            android:id="@+id/drawer_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/text_Settings" />
 
     </group>
 </menu>
