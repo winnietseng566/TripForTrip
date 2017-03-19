@@ -1,4 +1,4 @@
-package com.tripfortrip.tripfortrip._00_Main;
+package com.tripfortrip.tripfortrip._01_MyJourney;
 
 
         import android.app.Activity;
@@ -83,7 +83,7 @@ public class HomeFragment extends Fragment {
                 ImageView iv_calendarStart = (ImageView) input.findViewById(R.id.iv_calendarStart);
                 iv_calendarStart.setOnClickListener(new Button.OnClickListener() {
                     @Override
-                    public void onClick(View v) {
+                    public void onClick(View v) { //選擇起始日期
                         DatePickerDialogFragment datePickerFragment = new DatePickerDialogFragment();
                         datePickerFragment.setEdDate( edJouneyStart);
                         FragmentManager fm = getActivity().getSupportFragmentManager();
@@ -96,7 +96,7 @@ public class HomeFragment extends Fragment {
                 ImageView iv_calendarEnd = (ImageView) input.findViewById(R.id.iv_calendarEnd);
                 iv_calendarEnd.setOnClickListener(new View.OnClickListener() {
                     @Override
-                    public void onClick(View v) {
+                    public void onClick(View v) { //選擇結束日期
                         DatePickerDialogFragment datePickerFragment = new DatePickerDialogFragment();
                         datePickerFragment.setEdDate( edJouneyEnd);
                         FragmentManager fm = getActivity().getSupportFragmentManager();
@@ -105,8 +105,8 @@ public class HomeFragment extends Fragment {
                         Log.d("edJouneyStart","click");
                     }
                 });
-                showNow();
-                new AlertDialog.Builder(context)
+                showNow(); //按下新增我的行程按鈕日期一律是當天
+                final AlertDialog createrJourneyDialog = new AlertDialog.Builder(context)
                         .setTitle("新增我的行程")
                         .setView(input)
                         .setPositiveButton("新增", new DialogInterface.OnClickListener() {
@@ -134,40 +134,37 @@ public class HomeFragment extends Fragment {
 
                             private int getPicRandom() {
                                 int picRandom = (int) (Math.random()*8);
-                                switch (picRandom){
-                                    case 0:
-                                        picRandom = R.drawable.view_jouney0;
-                                        break;
-                                    case 1:
-                                        picRandom = R.drawable.view_jouney1;
-                                        break;
-                                    case 2:
-                                        picRandom = R.drawable.view_jouney2;
-                                        break;
-                                    case 3:
-                                        picRandom = R.drawable.view_jouney3;
-                                        break;
-                                    case 4:
-                                        picRandom = R.drawable.view_jouney4;
-                                        break;
-                                    case 5:
-                                        picRandom = R.drawable.view_jouney5;
-                                        break;
-                                    case 6:
-                                        picRandom = R.drawable.view_jouney6;
-                                        break;
-                                    case 7:
-                                        picRandom = R.drawable.view_jouney7;
-                                        break;
-                                    case 8:
-                                        picRandom = R.drawable.view_jouney8;
-                                        break;
-                                }
-                                return picRandom;
+                                List<Integer> picRandomList = new ArrayList<Integer>();
+                                picRandomList.add(R.drawable.view_jouney0);
+                                picRandomList.add(R.drawable.view_jouney1);
+                                picRandomList.add(R.drawable.view_jouney3);
+                                picRandomList.add(R.drawable.view_jouney4);
+                                picRandomList.add(R.drawable.view_jouney5);
+                                picRandomList.add(R.drawable.view_jouney6);
+                                picRandomList.add(R.drawable.view_jouney7);
+                                picRandomList.add(R.drawable.view_jouney8);
+                                return picRandomList.get(picRandom);
                             }
                         })
                         .setNegativeButton("取消",null)
                         .show();
+//                createrJourneyDialog.setOnShowListener(new DialogInterface.OnShowListener() {
+//
+//                    @Override
+//                    public void onShow(DialogInterface dialog) {
+//
+//                        Button b = createrJourneyDialog.getButton(AlertDialog.BUTTON_POSITIVE);
+//                        b.setOnClickListener(new View.OnClickListener() {
+//
+//                            @Override
+//                            public void onClick(View view) {
+//                                // TODO Do something
+
+//
+//                            }
+//                        });
+//                    }
+//                });
             }
         });
         return fgMyJournry;
@@ -259,8 +256,14 @@ public class HomeFragment extends Fragment {
                 @Override
                 public void onClick(View v) {
                     Fragment fragment = new com.tripfortrip.tripfortrip._00_Main.SceneFragment();
-//                    switchFragment(fragment);
-                    ((Activity)context).setTitle(R.string.text_Scene);
+                    final FragmentManager fragmentManager =((FragmentActivity)context).getSupportFragmentManager();
+                    FragmentTransaction fragmentTransaction =
+                            fragmentManager.beginTransaction();
+                    fragmentTransaction.replace(R.id.body, fragment);
+                    fragmentTransaction.addToBackStack(null);//關掉backbutton的預設（才會記得Fragment)
+                    fragmentTransaction.commit();
+//
+                    ((Activity)context).setTitle(journey.getTitle()+"|"+journey.getDateStart()+"~"+journey.getDateEnd());
 
                     Log.d(" onItemClick"," onItemClick");
 //                    switchFragment(fragment);  //設定返回鍵是記錄Fragment而不是結束Activity
@@ -286,13 +289,13 @@ public class HomeFragment extends Fragment {
 
         }
     }
-    private  void switchFragment(Fragment fragment) {
-        FragmentTransaction fragmentTransaction =
-                getFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.body, fragment);
-        fragmentTransaction.addToBackStack(null);//關掉backbutton的預設（才會記得Fragment)
-        fragmentTransaction.commit();
-    }
+//    private  void switchFragment(Fragment fragment) {
+//        FragmentTransaction fragmentTransaction =
+//                getFragmentManager().beginTransaction();
+//        fragmentTransaction.replace(R.id.body, fragment);
+//        fragmentTransaction.addToBackStack(null);//關掉backbutton的預設（才會記得Fragment)
+//        fragmentTransaction.commit();
+//    }
 
 }
 

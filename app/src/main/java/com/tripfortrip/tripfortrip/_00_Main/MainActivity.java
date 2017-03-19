@@ -2,7 +2,6 @@ package com.tripfortrip.tripfortrip._00_Main;
 
 import android.Manifest;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -22,17 +21,13 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.tripfortrip.tripfortrip.R;
-import com.tripfortrip.tripfortrip._06_Member.AlertDialogFragment;
-import com.tripfortrip.tripfortrip._06_Member.LoginActivity;
+import com.tripfortrip.tripfortrip._01_MyJourney.HomeFragment;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -174,6 +169,11 @@ public class MainActivity extends AppCompatActivity {
                         switchFragment(fragment);
                         setTitle(R.string.text_EmergencyButton);
                         break;
+                    case  R.id.item_exJourney:
+                         fragment = new HomeFragment();//先借用ＨＯＭＥ的
+                        switchFragment(fragment);
+                        setTitle(R.string.text_exJourney);
+                        break;
 //                    case R.id.item_Share:     //ＡＰＰ分享
 //                        fragment = new com.tripfortrip.tripfortrip._00_Main.ShareFragment();
 //                        switchFragment(fragment);
@@ -199,7 +199,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initBody() {
-        Fragment fragment = new com.tripfortrip.tripfortrip._00_Main.HomeFragment();
+        Fragment fragment = new HomeFragment();
         switchFragment(fragment);
         setTitle(R.string.text_myJourney);
     }
