@@ -5,6 +5,9 @@ package="com.tripfortrip.tripfortrip">
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
 
 <uses-feature android:name="android.hardware.camera" />
 
@@ -15,7 +18,7 @@ package="com.tripfortrip.tripfortrip">
     android:theme="@style/AppTheme">
     <meta-data
         android:name="com.google.android.geo.API_KEY"
-        android:value="AIzaSyCYWM99f49eLh8ylrT0ggKX78syEejVHfA" />
+        android:value="AIzaSyDDmvOZkre2mCnQs5kZgD4u86mx9yLsQ3k" />
 
     <activity android:name="._00_Main.MainActivity"></activity>
     <activity android:name="._01_MyJourney.JourneyActivity"/>
@@ -23,15 +26,11 @@ package="com.tripfortrip.tripfortrip">
     <activity android:name="._06_Member.LoginActivity">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
-
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
     </activity>
 
     <meta-data android:name="com.facebook.sdk.ApplicationId"
         android:value="@string/facebook_app_id"/>
-
-
-    <uses-permission android:name="android.permission.INTERNET" />
 </application>
-    </manifest>
+</manifest>
