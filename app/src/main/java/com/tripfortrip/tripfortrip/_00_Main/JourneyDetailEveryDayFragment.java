@@ -25,9 +25,11 @@ public class JourneyDetailEveryDayFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        RecyclerView recyclerView=(RecyclerView) inflater.inflate(R.layout.journey_detail_everyday_fragment,container,false);
+        View view = inflater.inflate(R.layout.journey_detail_everyday_fragment,container,false);
+//        RecyclerView recyclerView=(RecyclerView) inflater.inflate(R.layout.journey_detail_everyday_fragment,container,false);
+        RecyclerView recyclerView= (RecyclerView) view.findViewById(R.id.recyclerviewEverday);
         setUpRecyclerView(recyclerView);
-        return  recyclerView;
+        return  view;
     }
     private void setUpRecyclerView(RecyclerView rv)
     {

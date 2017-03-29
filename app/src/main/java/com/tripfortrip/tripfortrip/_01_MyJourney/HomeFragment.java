@@ -166,6 +166,7 @@ public class HomeFragment extends Fragment {
                                     long rowId = helper.insert(journeyBean);
                                     if(rowId !=-1){
                                         Toast.makeText(mainActivity,"新增成功",Toast.LENGTH_SHORT).show();
+                                        showAllMyJournry(rv_journey);
                                     }else {
                                         Toast.makeText(mainActivity,"新增失敗",Toast.LENGTH_SHORT).show();
 
