@@ -31,12 +31,16 @@
         android:text="Google+"
         android:onClick="onGoogleClick" />
 
-    <Button
+    <!--<Button-->
+        <!--android:id="@+id/btnFacebook"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Facebook"-->
+       <!--/>-->
+    <com.facebook.login.widget.LoginButton
         android:id="@+id/btnFacebook"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Facebook"
-        android:onClick="onFacebookClick" />
+        android:layout_height="wrap_content" />
 
 
 </LinearLayout>

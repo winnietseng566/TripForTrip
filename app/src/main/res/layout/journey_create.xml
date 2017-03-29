@@ -17,7 +17,8 @@
     android:id="@+id/edt_jouneyName"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:hint="行程名稱" />
+    android:hint="行程名稱"
+    />
 
 
     </android.support.design.widget.TextInputLayout>
@@ -37,7 +38,8 @@
                 android:inputType="date"
                 android:focusable="true"
                 android:hint="出發日期"
-                android:layout_width="240dp" />
+                android:layout_width="240dp"
+                android:enabled="false"/>
 
 
         </android.support.design.widget.TextInputLayout>
@@ -70,7 +72,8 @@
             android:inputType="date"
             android:focusable="true"
             android:hint="結束日期"
-            android:layout_width="240dp" />
+            android:layout_width="240dp"
+            android:enabled="false"/>
 
 
 

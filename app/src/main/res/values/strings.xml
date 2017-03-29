@@ -28,6 +28,12 @@
     <string name="wrongPasswd">密碼錯誤</string>
     <string name="again">重新輸入</string>
     <string name="lostPasswd">忘記密碼</string>
-    <string name="web_application_id">hvieO-l-PPEYGSXBNjq_462o</string>
     <string name="text_exJourney">歷史旅程</string>
+    <string name="text_logout">登出測試鈕</string>
+
+    //登入
+    <string name="facebook_app_id">217452228733529</string>
+    <string name="web_application_id">50007020088-p4iei7appv8sc3kmfhmapfa6jujfgpct.apps.googleusercontent.com</string>
+
+
 </resources>

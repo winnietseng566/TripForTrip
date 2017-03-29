@@ -2,6 +2,7 @@ package com.tripfortrip.tripfortrip._00_Main;
 
 import android.Manifest;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -21,26 +22,31 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.tripfortrip.tripfortrip.R;
+import com.tripfortrip.tripfortrip._00_Main.init.MySQLiteOpenHelper;
 import com.tripfortrip.tripfortrip._01_MyJourney.HomeFragment;
+import com.tripfortrip.tripfortrip._06_Member.LoginActivity;
 
 import java.util.HashSet;
 import java.util.Set;
 
 public class MainActivity extends AppCompatActivity {
-/**
+
  //關於firebase登入
     private static final int REQUEST_LOGIN_OK = 100;
     private static final String TAG = "MainActivity";
     private boolean logon = false ;
     FirebaseAuth auth;
     private FirebaseUser user;
-**/
+
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle actionBarDrawerToggle;//與DrawerLayout搭配使用的ActionBar控制物件
     private ImageView imageView;
@@ -48,20 +54,28 @@ public class MainActivity extends AppCompatActivity {
     //private static final int REQUEST_TAKE_PICTURE_LARGE = 1;
     private static final int REQUEST_PICK_PICTURE = 2;
 
+    MySQLiteOpenHelper helper;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        /**
+
          //關於firebase登入
         auth = FirebaseAuth.getInstance();
        login();
-        **/
+
         imageView = (ImageView) findViewById(R.id.ivUser);//處理顯示照片
         setUpActionBar();
         initDrawer();
         initBody();
+
+
+        if(helper == null){
+            helper = new MySQLiteOpenHelper(this);
+        }
 
     }
     public void onPickPictureClick(View view) {
@@ -74,14 +88,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        /**
+
         //關於firebase登入
         user = auth.getCurrentUser();
         if (user !=null){
             Log.d(TAG, "UID:"+ user.getUid());
             Log.d(TAG, "email:"+ user.getEmail());
         }
-         */
+
 
         askPermissions();
     }
@@ -189,6 +203,13 @@ public class MainActivity extends AppCompatActivity {
                         switchFragment(fragment);
                         setTitle(R.string.text_Settings);
                         break;
+                    case R.id.drawer_logout:  //登出測試鈕
+                        auth.signOut();
+//        SharedPreferences setting = getSharedPreferences(getString(R.string.pref_name),MODE_PRIVATE);
+//        setting.edit().putString(getString(R.string.pref_password),"").apply();
+//        user = auth.getCurrentUser();
+                        Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                        startActivityForResult(intent, REQUEST_LOGIN_OK);
                     default:
                         initBody();
                         break;
@@ -225,7 +246,7 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.replace(R.id.body, fragment);
         fragmentTransaction.commit();
     }
-    /**
+
      //關於firebase登入
     private void login() {
         if(!logon) {
@@ -235,23 +256,23 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-    **/
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        /**
+
          //關於firebase登入
         if(requestCode == REQUEST_LOGIN_OK){
             if(resultCode == RESULT_OK){
-                String email = data.getStringExtra("uid");
-                String password = data.getStringExtra("password");
-                Log.d(TAG, email+"/"+password);
+//                String email = data.getStringExtra("uid");
+//                String password = data.getStringExtra("password");
+//                Log.d(TAG, email+"/"+password);
             }else {
                 finish();
             }
         }
-         *
-         */
+
+
         if (resultCode == RESULT_OK) {
             switch (requestCode) {
                 case REQUEST_PICK_PICTURE:
@@ -270,14 +291,14 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-    /**
+
       //關於firebase登入
     public void onLogoutClick(View view) {
         auth.signOut();
-        SharedPreferences setting = getSharedPreferences(getString(R.string.pref_name),MODE_PRIVATE);
-        setting.edit().putString(getString(R.string.pref_password),"").apply();
-        user = auth.getCurrentUser();
+//        SharedPreferences setting = getSharedPreferences(getString(R.string.pref_name),MODE_PRIVATE);
+//        setting.edit().putString(getString(R.string.pref_password),"").apply();
+//        user = auth.getCurrentUser();
         login();
     }
-     **/
+
 }

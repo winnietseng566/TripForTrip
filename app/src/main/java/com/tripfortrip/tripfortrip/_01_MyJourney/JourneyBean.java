@@ -1,7 +1,10 @@
 package com.tripfortrip.tripfortrip._01_MyJourney;
 
 
-public class JourneyBean {
+import java.io.Serializable;
+
+public class JourneyBean implements Serializable{
+    private  int id;
     private int pic;
     private String title;
     private String dateStart;
@@ -14,6 +17,22 @@ public class JourneyBean {
         this.title = title;
         this.dateStart = dateStart;
         this.dateEnd=dateEnd;
+    }
+
+    public JourneyBean(int id, int pic, String title, String dateStart, String dateEnd) {
+        this.id = id;
+        this.pic = pic;
+        this.title = title;
+        this.dateStart = dateStart;
+        this.dateEnd = dateEnd;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getPic() {

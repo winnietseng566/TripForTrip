@@ -44,6 +44,10 @@
             android:id="@+id/drawer_settings"
             android:icon="@drawable/ic_settings"
             android:title="@string/text_Settings" />
+        <item
+            android:id="@+id/drawer_logout"
+            android:title="@string/text_logout"/>
+
 
     </group>
 </menu>
