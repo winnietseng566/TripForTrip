@@ -1,28 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.tripfortrip.tripfortrip">
+
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <uses-feature android:name="android.hardware.camera" />
- <!--<uses-permission android:name="android.permission.INTERNET"/>-->
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!-- <uses-permission android:name="android.permission.INTERNET"/> -->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="._00_Main.MainActivity">
+        <activity android:name="._00_Main.MainActivity"></activity>
+        <activity android:name="._01_MyJourney.JourneyActivity" />
+        <activity android:name="._02_SpotSearch.SearchActivity">
+
+        </activity>
+        <activity android:name="._06_Member.LoginActivity"></activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/key_placesAPI" />
+
+        <activity android:name="._02_SpotSearch.Search2Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <activity android:name="._01_MyJourney.JourneyActivity" />
-        <activity android:name="._02_SpotSearch.SearchActivity" />
-        <activity android:name="._06_Member.LoginActivity">
-
         </activity>
     </application>
 

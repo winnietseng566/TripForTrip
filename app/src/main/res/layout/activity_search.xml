@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_search"
@@ -10,4 +9,96 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.tripfortrip.tripfortrip._02_SpotSearch.SearchActivity">
 
-</RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvLan"
+        android:text="@string/lan"
+        android:textSize="20sp"
+        android:layout_marginLeft="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txvLoc"
+        android:text="@string/Loc"
+        android:textSize="20sp"
+        android:layout_toEndOf="@+id/txvSetting"
+        android:layout_below="@+id/txvSetting"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toRightOf="@+id/txvSetting" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bt"
+        android:onClick="setup"
+        android:layout_below="@+id/txvLoc"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="23dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtLan"
+        android:text=""
+        android:hint="@string/etlan"
+        android:layout_alignBaseline="@+id/tvLan"
+        android:layout_alignBottom="@+id/tvLan"
+        android:layout_toRightOf="@+id/tvLan"
+        android:layout_toEndOf="@+id/tvLan" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvLon"
+        android:text="@string/lon"
+        android:textSize="20sp"
+        android:layout_marginTop="8dp"
+        android:layout_alignTop="@+id/edtLon"
+        android:layout_toLeftOf="@+id/edtLan"
+        android:layout_toStartOf="@+id/edtLan" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="以手機位置當輸入"
+        android:onClick="getLocation"
+        android:id="@+id/button2"
+        android:layout_below="@+id/edtLon"
+        android:layout_alignLeft="@+id/tvLon"
+        android:layout_alignStart="@+id/tvLon"
+        android:layout_marginTop="15dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="用經緯度查詢地址"
+        android:onClick="onQuery"
+        android:layout_above="@+id/txvSetting"
+        android:layout_toRightOf="@+id/txvLoc"
+        android:layout_toEndOf="@+id/txvLoc" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtLon"
+        android:text=""
+        android:hint="@string/etlon"
+        android:layout_below="@+id/edtLan"
+        android:layout_toRightOf="@+id/tvLon"
+        android:layout_toEndOf="@+id/tvLon" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txvSetting"
+        android:text="@string/Setting"
+        android:textSize="20sp"
+        android:layout_marginTop="130dp"
+        android:layout_below="@+id/button2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    </RelativeLayout>
