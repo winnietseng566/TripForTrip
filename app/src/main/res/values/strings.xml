@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">Trip For Trip</string>
+    <string name="key_placesAPI">AIzaSyCWpaB6khEfkctIRhl1VXhU0rWH8Z1n2Es</string>
+    <string name="web_application_id">hvieO-l-PPEYGSXBNjq_462o</string>
+
+
     <!--_00_Main-->
     <string name="text_myJourney">我的旅程</string>
     <string name="text_Scene">景點瀏覽</string>
@@ -33,6 +37,40 @@
     <string name="btn_logout_from_google">Logout from Google</string>
     <string name="btn_revoke_access">Revoke Access</string>
 
+    <string name="searchSpot">以景點搜尋</string>
+    <string name="searchCountry">國家/縣市</string>
+
+    <array name="places_type">
+        <item>全部</item>
+        <item>住宿/飯店</item>
+        <item>景點</item>
+        <item>餐廳</item>
+        <item>娛樂</item>
+        <item>交通運輸</item>
+        <item>購物</item>
+    </array>
+
+    <array name="places_city">
+        <item>未選擇</item>
+        <item>基隆市</item>
+        <item>台北市</item>
+        <item>新北市</item>
+        <item>桃園市</item>
+        <item>新竹縣</item>
+        <item>苗栗縣</item>
+        <item>台中市</item>
+        <item>南投縣</item>
+        <item>彰化縣</item>
+        <item>雲林線</item>
+        <item>嘉義縣</item>
+        <item>台南市</item>
+        <item>高雄市</item>
+        <item>屏東縣</item>
+        <item>宜蘭縣</item>
+        <item>花蓮縣</item>
+        <item>台東縣</item>
+    </array>
+
     <!--_03_Member-->
 
     <!--_04_Member-->
@@ -47,15 +85,8 @@
     <string name="wrongPasswd">密碼錯誤</string>
     <string name="again">重新輸入</string>
     <string name="lostPasswd">忘記密碼</string>
+    <string name="autocomplete_hint">輸入景點或地址</string>
+    <string name="place_details">place_details</string>
 
-    <string name="web_application_id">hvieO-l-PPEYGSXBNjq_462o</string>
-
-    <string name="key_placesAPI">AIzaSyDEEm3gQ6PuB-zelFoO67uISqUPIlOFHZY</string>
-    <string name="searchSpot">以景點搜尋</string>
-    <string name="searchCountry">國家/縣市</string>
-    <array name="places">
-        <item>ATM</item>
-        <item>Hotel</item>
-    </array>
 
 </resources>

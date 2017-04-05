@@ -1,12 +1,18 @@
 package com.tripfortrip.tripfortrip._02_SpotSearch;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.util.Log;
+import android.widget.ImageView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.BufferedInputStream;
 import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
@@ -36,9 +42,11 @@ public class PlacesService {
 
         try {
             String json = getJSON(urlString);
-
-            System.out.println(json);
+            Log.d("urlString",urlString);
+//            Log.d("json",json);
+//            System.out.pr/intln(json);
             JSONObject object = new JSONObject(json);
+
             JSONArray array = object.getJSONArray("results");
 
             ArrayList<Place> arrayList = new ArrayList<Place>();
@@ -46,7 +54,7 @@ public class PlacesService {
                 try {
                     Place place = Place
                             .jsonToPontoReferencia((JSONObject) array.get(i));
-                    Log.v("Places Services ", "" + place);
+//                    Log.v("Places Services ", "" + place);
                     arrayList.add(place);
                 } catch (Exception e) {
                 }
@@ -58,6 +66,48 @@ public class PlacesService {
         }
         return null;
     }
+
+    public Bitmap getPhotos(String photoUrl){
+        try {
+            Bitmap bm = null;
+            InputStream is = null;
+            BufferedInputStream bis = null;
+
+            try {
+                    URLConnection conn = new URL(photoUrl +API_KEY).openConnection();
+                Log.d("photoUrl +API_KEY",photoUrl +API_KEY);
+                    conn.connect();
+                    is = conn.getInputStream();
+                    bis = new BufferedInputStream(is, 81920);
+                    bm = BitmapFactory.decodeStream(bis);
+                Log.d("bm",bm+"");
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                if (bis != null) {
+                    try {
+                        bis.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+                if (is != null) {
+                    try {
+                        is.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+            return bm;
+        }catch (Exception e){
+            e.printStackTrace();
+
+        }
+        return null;
+    }
+
 
     // https://maps.googleapis.com/maps/api/place/search/json?location=28.632808,77.218276&radius=500&types=atm&sensor=false&key=apikey
     private String makeUrl(double latitude, double longitude, String place) {
@@ -85,6 +135,8 @@ public class PlacesService {
     }
 
     protected String getJSON(String url) {
+//        Log.d("getJSON","getJSON");
+
         return getUrlContents(url);
     }
 
@@ -94,7 +146,7 @@ public class PlacesService {
             URL url = new URL(theUrl);
             URLConnection urlConnection = url.openConnection();
             BufferedReader bufferedReader = new BufferedReader(
-                    new InputStreamReader(urlConnection.getInputStream()), 8);
+                    new InputStreamReader(urlConnection.getInputStream()));
             String line;
             while ((line = bufferedReader.readLine()) != null) {
                 content.append(line + "\n");
@@ -103,6 +155,8 @@ public class PlacesService {
         }catch (Exception e) {
             e.printStackTrace();
         }
+//        Log.d("getUrlContents",content.toString());
+
         return content.toString();
     }
 }

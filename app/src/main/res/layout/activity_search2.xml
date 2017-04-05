@@ -15,39 +15,71 @@
         android:paddingTop="10dp"
 
         tools:ignore="DisableBaselineAlignment,UselessParent">
-        <android.support.design.widget.TextInputLayout
+        <!--<android.support.design.widget.TextInputLayout-->
+            <!--android:layout_width="200dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1">-->
+
+            <!--<EditText-->
+                <!--android:id="@+id/edt_searchCountry"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:inputType="text"-->
+                <!--android:focusable="true"-->
+                <!--android:hint="@string/searchCountry"-->
+                <!--android:layout_width="match_parent" />-->
+
+
+        <!--</android.support.design.widget.TextInputLayout>-->
+
+        <Spinner
+            android:id="@+id/sp_searchCountry"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1">
+            android:layout_weight="1"/>
 
-            <EditText
-                android:id="@+id/edt_searchCountry"
-                android:layout_height="wrap_content"
-                android:inputType="text"
-                android:focusable="true"
-                android:hint="@string/searchCountry"
-                android:layout_width="match_parent" />
+        <!--<android.support.design.widget.TextInputLayout-->
+            <!--android:layout_width="200dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1">-->
 
+            <!--<EditText-->
+                <!--android:id="@+id/edt_searchSpot"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:inputType="text"-->
+                <!--android:focusable="true"-->
+                <!--android:hint="@string/searchSpot"-->
+                <!--android:layout_width="match_parent"-->
+                 <!--/>-->
+    <!--</android.support.design.widget.TextInputLayout>-->
 
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
+    <Spinner
+            android:id="@+id/sp_searchSpotType"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1">
+            android:layout_weight="1"/>
 
-            <EditText
-                android:id="@+id/edt_searchCity"
-                android:layout_height="wrap_content"
-                android:inputType="text"
-                android:focusable="true"
-                android:hint="@string/searchSpot"
-                android:layout_width="match_parent"
-                 />
+        <Button
+            android:text="搜尋"
+            android:layout_height="wrap_content"
+            android:id="@+id/button4"
+            android:layout_weight="1"
+            android:layout_width="150dp"
+            android:onClick="onSearchClick"/>
 
+        <Button
+            android:text="附近景點"
+            android:layout_height="wrap_content"
+            android:id="@+id/button5"
+            android:layout_weight="1"
+            android:onClick="onPickClick"
+            android:layout_width="170dp" />
 
-        </android.support.design.widget.TextInputLayout>
     </LinearLayout>
-
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_searchSpot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+       />
 
 </LinearLayout>
