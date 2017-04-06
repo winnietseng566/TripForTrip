@@ -359,7 +359,7 @@ public class Search2Activity extends AppCompatActivity {
             Map<String, String> map = new HashMap<>();
             map.put("picUrl", findPlaces.get(i).getPhotoUrlString());
             map.put("title", i+findPlaces.get(i).getName());
-            map.put("address", i+findPlaces.get(i).getName());
+            map.put("address", i+findPlaces.get(i).getVicinity());
             spotList.add(map);
         }
 
